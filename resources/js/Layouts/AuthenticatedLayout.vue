@@ -81,7 +81,7 @@ const showingNavigationDropdown = ref(false);
                                             v-for="lang in $page.props
                                                 .languages"
                                         >
-                                            {{ lang.title }}
+                                            <i :class="'flag-icon ' + lang.flag"></i> {{ lang.title }}
                                         </DropdownLink>
                                     </template>
                                 </Dropdown>

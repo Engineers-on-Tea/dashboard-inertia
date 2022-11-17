@@ -1,13 +1,13 @@
 <script setup>
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import MasterLayout from "@/Pages/Admin/Layouts/MasterLayout.vue";
 import { Head } from "@inertiajs/inertia-vue3";
 </script>
 
 <template>
     <Head title="Dashboard" />
 
-    <AuthenticatedLayout>
-        <template #header>
+    <MasterLayout>
+        <!-- <template #header>
             <h2
                 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
             >
@@ -25,6 +25,6 @@ import { Head } from "@inertiajs/inertia-vue3";
                     </div>
                 </div>
             </div>
-        </div>
-    </AuthenticatedLayout>
+        </div> -->
+    </MasterLayout>
 </template>

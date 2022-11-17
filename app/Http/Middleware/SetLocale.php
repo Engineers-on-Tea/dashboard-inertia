@@ -22,9 +22,7 @@ class SetLocale
     {
         $segment = $request->segment(1);
         $supportedLocales = Config::get('app.supported-locales');
-        // get the length of the locale code
-        $localeCodeLength = strlen($segment);
-        if ($segment && in_array($segment, $supportedLocales) && $localeCodeLength == 2) {
+        if ($segment && in_array($segment, $supportedLocales) && strlen($segment) == 2) {
             $code = $segment;
         } else {
             $code = Lang::getAdminLangCode();

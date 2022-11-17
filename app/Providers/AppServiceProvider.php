@@ -46,7 +46,8 @@ class AppServiceProvider extends ServiceProvider
             },
             'setting' => function () {
                 return Utility::getDefaultSettings();
-            }
+            },
+            'name' => 'Mustafa'
         ]);
     }
 }

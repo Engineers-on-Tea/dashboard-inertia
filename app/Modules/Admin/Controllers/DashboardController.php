@@ -20,6 +20,11 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard');
     }
 
+    protected function homeDev()
+    {
+        return Inertia::render('Admin/Home');
+    }
+
     /**
      * @param string $language
      * @return RedirectResponse

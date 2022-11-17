@@ -36,6 +36,8 @@ Route::name('dashboard.')
                 Route::get('/', [DashboardController::class, 'home'])
                     ->name('home');
 
+                Route::get('/home', [DashboardController::class, 'homeDev']);
+
                 // Route::post('logout', [AuthController::class, 'logout'])
                 //     ->name('logout');
 
