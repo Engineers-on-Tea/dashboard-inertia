@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Home",
+        "url": "https://www.example.com",
+        "children": [
+            {
+                "title": "About",
+                "url": "https://www.example.com/about",
+                "children": [
+                    {
+                        "title": "About Us",
+                        "url": "https://www.example.com/about-us",
+                        "children": []
+                    },
+                    {
+                        "title": "About You",
+                        "url": "https://www.example.com/about-you",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "title": "Contact",
+                "url": "https://www.example.com/contact",
+                "children": []
+            }
+        ]
+    },
+    {
+        "title": "Blog",
+        "url": "https://www.example.com/blog",
+        "children": []
+    },
+    {
+        "title": "Shop",
+        "url": "https://www.example.com/shop",
+        "children": []
+    },
+    {
+        "title": "Cart",
+        "url": "https://www.example.com/cart",
+        "children": []
+    }
+]
