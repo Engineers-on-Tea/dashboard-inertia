@@ -1,5 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@php
+    $dir = '';
+    if (request()->is('admin/*') || request()->is('admin')) {
+        $dir = \App\Bll\Lang::getAdminLangDir();
+    } else {
+        $dir = \App\Bll\Lang::getLangDir();
+    }
+    if ($dir == 'rtl') {
+        $dir = '-rtl';
+    } else {
+        $dir = '';
+    }
+@endphp
+
+<html lang="{{ \App\Bll\Lang::getAdminLangCode() }}" data-textdirection="{{ $dir }}">
 
 <head>
     <meta charset="utf-8">
@@ -10,12 +24,13 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
-    @include('global.styles')
+    @include('global.styles', ['dir' => $dir])
 
     @if (request()->is('admin/*') || request()->is('admin'))
-        @include('admin.styles')
+        @include('admin.styles', ['dir' => $dir])
+        {{-- @include('admin.meta') --}}
     @else
-        @include('home.styles')
+        @include('home.styles', ['dir' => $dir])
     @endif
 
     <!-- Scripts -->
@@ -27,13 +42,14 @@
 <body class="font-sans antialiased">
     @inertia
 
-    @include('global.scripts')
+    @include('global.scripts', ['dir' => $dir])
 
-    @if (request()->is('admin/*'))
-        @include('admin.scripts')
+    @if (request()->is('admin/*') || request()->is('admin'))
+        @include('admin.scripts', ['dir' => $dir])
     @else
-        @include('home.scripts')
+        @include('home.scripts', ['dir' => $dir])
     @endif
+
 </body>
 
 </html>
