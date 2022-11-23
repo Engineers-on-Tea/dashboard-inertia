@@ -12,7 +12,7 @@ export default {
     <nav
         class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
         <div class="navbar-container d-flex content">
-            <div class="bookmark-wrapper d-flex align-items-center">
+            <!-- <div class="bookmark-wrapper d-flex align-items-center">
                 <ul class="nav navbar-nav">
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link bookmark-star"><i class="ficon text-warning" data-feather="star"></i></a>
@@ -26,7 +26,7 @@ export default {
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <ul class="nav navbar-nav align-items-center ms-auto">
                 <li class="nav-item dropdown dropdown-language">
                     <a class="nav-link dropdown-toggle" id="dropdown-flag" href="#" data-bs-toggle="dropdown"

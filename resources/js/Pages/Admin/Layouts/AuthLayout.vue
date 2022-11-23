@@ -54,14 +54,13 @@
 </template>
 
 <script>
-import lang from '../Components/LanguageSwitcher.vue';
 export default {
     mounted: function () {
 
         this.loadScript('app-assets/vendors/js/vendors.min.js');
-        var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js';
-        document.body.appendChild(script);
+        // var script = document.createElement('script');
+        // script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js';
+        // document.body.appendChild(script);
         this.loadScript('app-assets/vendors/js/charts/apexcharts.min.js');
         this.loadScript('app-assets/vendors/js/extensions/toastr.min.js');
         this.loadScript('app-assets/js/core/app-menu.js');

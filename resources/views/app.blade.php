@@ -27,8 +27,8 @@
     @include('global.styles', ['dir' => $dir])
 
     @if (request()->is('admin/*') || request()->is('admin'))
+        @include('admin.meta')
         @include('admin.styles', ['dir' => $dir])
-        {{-- @include('admin.meta') --}}
     @else
         @include('home.styles', ['dir' => $dir])
     @endif
