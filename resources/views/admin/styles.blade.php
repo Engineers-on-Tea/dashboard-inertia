@@ -22,8 +22,10 @@
 <!-- BEGIN: Page CSS-->
 <link rel="stylesheet" type="text/css"
     href="{{ asset('app-assets/css' . $dir . '/core/menu/menu-types/vertical-menu.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css' . $dir . '/pages/authentication.css') }}">
+
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css' . $dir . '/pages/dashboard-ecommerce.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css' . $dir . '/pages/authentication.css') }}">
+
 <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css' . $dir . '/plugins/charts/chart-apex.css') }}">
 <link rel="stylesheet" type="text/css"
     href="{{ asset('app-assets/css' . $dir . '/plugins/extensions/ext-component-toastr.css') }}">

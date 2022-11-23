@@ -25,11 +25,14 @@ use App\Modules\BlogCategory\Controllers\BlogCategoryController;
 Route::name('dashboard.')
     ->middleware(['set.locale'])
     ->group(function () {
-        // Route::get('/login', [AuthController::class, 'showLoginForm'])
-        //     ->name('login.show');
+        Route::get('/login', [AuthController::class, 'show'])
+            ->name('login.show');
 
-        // Route::post('/login', [AuthController::class, 'login'])
-        //     ->name('login.submit');
+        Route::post('/login', [AuthController::class, 'login'])
+            ->name('login.submit');
+
+        Route::get('change-language/{language}', [DashboardController::class, 'changeLanguage'])
+            ->name('change.lang');
 
         Route::middleware(['auth', 'verified'])
             ->group(function () {
@@ -39,11 +42,8 @@ Route::name('dashboard.')
                 Route::get('/home', [DashboardController::class, 'homeDev'])
                     ->name('home.dev');
 
-                // Route::post('logout', [AuthController::class, 'logout'])
-                //     ->name('logout');
-
-                Route::get('change-language/{language}', [DashboardController::class, 'changeLanguage'])
-                    ->name('change.lang');
+                Route::post('logout', [AuthController::class, 'logout'])
+                    ->name('logout');
 
                 // Profile Routes
                 Route::get('/profile', [ProfileController::class, 'edit'])

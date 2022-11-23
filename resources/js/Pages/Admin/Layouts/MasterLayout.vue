@@ -8,12 +8,13 @@
 
     </main>
 
+    <Footer></Footer>
 </template>
 
 <script setup>
 import Header from '../Includes/Header.vue'
 import SideBar from '../Includes/SideBar.vue'
-
+import Footer from '../Includes/Footer.vue'
 </script>
 
 <script>

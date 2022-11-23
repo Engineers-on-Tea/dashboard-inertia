@@ -806,12 +806,10 @@
 
         <div class="sidenav-overlay"></div>
         <div class="drag-target"></div>
-        <Footer></Footer>
     </MasterLayout>
 </template>
 
 <script setup>
 import MasterLayout from './Layouts/MasterLayout.vue';
 import { Head } from "@inertiajs/inertia-vue3";
-import Footer from './Includes/Footer.vue'
 </script>

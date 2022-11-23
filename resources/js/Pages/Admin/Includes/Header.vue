@@ -1,4 +1,12 @@
-<script></script>
+<script>
+export default {
+    methods: {
+        logout: function () {
+            this.$inertia.post(route('dashboard.logout'));
+        }
+    }
+}
+</script>
 <template>
     <!-- BEGIN: Header-->
     <nav
@@ -22,10 +30,10 @@
             <ul class="nav navbar-nav align-items-center ms-auto">
                 <li class="nav-item dropdown dropdown-language">
                     <a class="nav-link dropdown-toggle" id="dropdown-flag" href="#" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i
-                            :class="'flag-icon ' + $page.props.adminLang['flag']"></i><span class="selected-language">{{
-                                    $page.props.adminLang.title
-                            }}</span></a>
+                        aria-haspopup="true" aria-expanded="false">
+                        <i :class="'flag-icon ' + $page.props.adminLang['flag']"></i>
+                        <span class="selected-language">{{ $page.props.adminLang.title }}</span>
+                    </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-flag">
                         <a v-for="langs in $page.props.languages" class="dropdown-item"
                             :href="route('dashboard.change.lang', langs['id'])" :data-language="langs['code']">
@@ -183,7 +191,7 @@
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="#"><i class="me-50" data-feather="user"></i>
                             Profile</a>
-                        <a class="dropdown-item" href="#"><i class="me-50" data-feather="power"></i>
+                        <a class="dropdown-item" href="#" @click="logout()"><i class="me-50" data-feather="power"></i>
                             Logout</a>
                     </div>
                 </li>
